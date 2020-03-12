@@ -1,0 +1,22 @@
+<style> 
+ body, aside, section, h1, h2, ol, ul, figure {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-style: inherit;
+  font-size: inherit;
+  background: transparent;
+}
+
+ol {
+  list-style: none;
+}
+
+body {
+  line-height: 1.5;
+}
+
+img {
+  width: inherit;
+}
+</style>
