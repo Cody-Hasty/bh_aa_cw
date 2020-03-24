@@ -1,0 +1,34 @@
+<h1>JUST ONE OF THE CATS. JUST. ONE.</h1>
+<table>
+
+    <thead>
+        <tr>
+            <th colspan="2">dis cat</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>name:</td>
+            <td><%= @cat.name %></td>
+        </tr>
+        <tr>
+            <td>sex:</td>
+            <td><%= @cat.sex %></td>
+        </tr>
+        <tr>
+            <td>color:</td>
+            <td><%= @cat.color %></td>
+        </tr>
+        <tr>
+            <td>birthday:</td>
+            <td><%= @cat.birthdate %></td>
+        </tr>
+        <tr>
+            <td>description:</td>
+            <td><%= @cat.description %></td>
+        </tr>
+
+    </tbody>
+</table>
+<a href="<%= cats_url %>">CHECK OUT ALL THE CATS!</a>

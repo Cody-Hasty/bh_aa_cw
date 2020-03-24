@@ -1,6 +1,6 @@
 class ArtworksController < ApplicationController
     def index
-        debugger
+        # debugger
        artworks = Artwork.where(artist_id: params[:user_id])
        artworks += Artwork.where(viewer_id: params[:user_id])
        
