@@ -1,0 +1,8 @@
+<h2>Frontpage / All Subs</h2>
+
+<ul>
+    <% Sub.all.each do |sub| %>
+        <a href='<%= sub_url(sub) %>'><%= sub.title %></a>
+        <p><% sub.description %></p>
+    <% end %>
+</ul>

@@ -1,0 +1,11 @@
+<h2><%=@sub.title %></h2>
+<h4> Description </h4>
+<p><%=@sub.description %></p>
+<a href = "<%=new_post_url%>"> Make New Post! </a>
+<% @sub.posts.each do |post| %>
+    <ul>
+        <li><a href = "<%=post_url(post)%>"><%=post.title %></li></a>
+    </ul>
+<% end %>
+<br>
+<a href = "<%=edit_post_url(@sub) if @sub.mod_id == current_user.id%>"> Edit </a>
