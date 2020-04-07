@@ -97,12 +97,9 @@ function curriedSum(numArgs) {
   }
 }
 
-const sum = curriedSum(4);
-console.log(sum(5)(30)(20)(1)); // => 56
+// const sum = curriedSum(4);
+// console.log(sum(5)(30)(20)(1)); // => 56
 
-// function sumThree(num1, num2, num3) {
-//   return num1 + num2 + num3;
-// }
 
 // sumThree(4, 20, 6); // == 30
 
@@ -113,17 +110,40 @@ console.log(sum(5)(30)(20)(1)); // => 56
 // f1 = f1(6); // = 30
 
 // // or more briefly:
-// sumThree.curry(3)(4)(20)(6); // == 30
 
-Function.prototype.curry = function(num){
-    let numbers = [];
-    return (number) => {
-        numbers.push(number);
-        if (numbers.length === num){
-            
-            // return this.call(...numbers);
-        } else {
-            
-        }
+// Function.prototype.curry = function(num){
+//     let numbers = [];
+//     let func = this;
+//     return function curry2(number) {
+//         numbers.push(number);
+//         if (numbers.length === num){
+//             return func.apply(this, numbers);
+//             // return this.call(...numbers);
+//         } else {
+//             return curry2;
+//         }
+//     }
+// }
+
+Function.prototype.curry = function (num) {
+  let numbers = [];
+  let func = this;
+  return function curry2(number) {
+    numbers.push(number);
+    if (numbers.length === num) {
+      // return func.call(this, ...numbers);
+      return func(...numbers);
+      // return this.call(...numbers);
+    } else {
+      return curry2;
     }
+  }
 }
+
+
+function sumThree(num1, num2, num3) {
+    return num1 + num2 + num3;
+}
+
+
+console.log(sumThree.curry(3)(4)(20)(6)); // == 30
