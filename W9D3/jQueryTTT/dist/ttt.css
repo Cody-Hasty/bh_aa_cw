@@ -1,0 +1,56 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    padding: 0px 0px 0px 0px;
+}
+
+li {
+    line-height: 98px;
+    text-align: center;
+    margin: none;
+    list-style: none;
+    border: 1px solid black;
+    width: 98px;
+    height: 98px;
+    background: gray;
+}
+
+body {
+    text-align: center;
+}
+
+li:hover {
+    background: yellow;
+}
+
+.xMove {
+    background: white;
+}
+
+.xMove:hover {
+    background: white;
+}
+
+/* .xMove:after {
+    content: "x";
+} */
+
+.oMove {
+    background: white;
+}
+
+.oMove:hover {
+    background: white;
+}
+
+.winner {
+    background: green;
+}
+
+/* .ttt {
+    display: block;
+    align-self: center; 
+} */
